@@ -337,8 +337,8 @@ Outer:
 
 			testutil.Equals(t, sexp.Labels(), sres.Labels())
 
-			smplExp, errExp := storage.ExpandSamples(sexp.Iterator())
-			smplRes, errRes := storage.ExpandSamples(sres.Iterator())
+			smplExp, errExp := storage.ExpandSamples(sexp.Iterator(), nil)
+			smplRes, errRes := storage.ExpandSamples(sres.Iterator(), nil)
 
 			testutil.Equals(t, errExp, errRes)
 			testutil.Equals(t, smplExp, smplRes)
@@ -640,8 +640,8 @@ Outer:
 
 			testutil.Equals(t, sexp.Labels(), sres.Labels())
 
-			smplExp, errExp := storage.ExpandSamples(sexp.Iterator())
-			smplRes, errRes := storage.ExpandSamples(sres.Iterator())
+			smplExp, errExp := storage.ExpandSamples(sexp.Iterator(), nil)
+			smplRes, errRes := storage.ExpandSamples(sres.Iterator(), nil)
 
 			testutil.Equals(t, errExp, errRes)
 			testutil.Equals(t, smplExp, smplRes)
@@ -986,8 +986,8 @@ func TestTombstoneClean(t *testing.T) {
 
 			testutil.Equals(t, sexp.Labels(), sres.Labels())
 
-			smplExp, errExp := storage.ExpandSamples(sexp.Iterator())
-			smplRes, errRes := storage.ExpandSamples(sres.Iterator())
+			smplExp, errExp := storage.ExpandSamples(sexp.Iterator(), nil)
+			smplRes, errRes := storage.ExpandSamples(sres.Iterator(), nil)
 
 			testutil.Equals(t, errExp, errRes)
 			testutil.Equals(t, smplExp, smplRes)
